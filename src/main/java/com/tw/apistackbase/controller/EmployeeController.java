@@ -45,7 +45,7 @@ public class EmployeeController {
     }
 
     @PostMapping(value = "/employees")
-    public Employee addemployee(Employee employee) {
+    public Employee addemployee(@RequestBody Employee employee) {
         employeeList.add(employee);
         return employee;
     }
