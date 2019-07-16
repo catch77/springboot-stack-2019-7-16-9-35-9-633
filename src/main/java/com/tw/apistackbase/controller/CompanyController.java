@@ -36,7 +36,7 @@ public class CompanyController {
         return null;
     }
 
-    @GetMapping()
+    @GetMapping(params = {"page", "pageSize"})
     public List<Company> getCompaniesByPage(@RequestParam int page, @RequestParam int pageSize) {
         List<Company> list = new ArrayList<>();
         for (int i = page-1; i < pageSize; i++) {
